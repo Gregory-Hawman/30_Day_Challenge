@@ -1,38 +1,32 @@
 import React, { useState } from "react";
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCheck, faEdit, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
 
+import Navbar from './components/Navbar';
+import { HC_ChallengeCard30, HC_ChallengeCard60 } from './components/HC_ChallengeCard'
+import WelcomeBack from './components/WelcomeBack';
 
-const dailyTasksCard = () => {
-  let day = 1
-  return(
-    <div>
-      <h1>`Day:${day}`</h1>
-    </div>
-  )
-}
+import './App.css'
 
-const dailyTasksList = () => {
-  return(
-    <div>
-
-    </div>
-  )
-}
+library.add(faEnvelope, faKey, faEdit, faCheck);
 
 function App() {
   return (
-    <div className="App">
-      <h1>30-Day Challenge </h1>
-      <div>
-        <button>30-Days</button>
-        <button>60-Days</button>
-        <button>90-Days</button>
-        <button>100-Days</button>
-      </div>
-      <div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <h1>Your Daily Challenges </h1>
 
+        <WelcomeBack />
+
+        <div className='allCards'>
+          <HC_ChallengeCard30 />
+          <HC_ChallengeCard60 />
+        </div>
       </div>
-    </div>
+    </Router>
+    
   );
 }
 

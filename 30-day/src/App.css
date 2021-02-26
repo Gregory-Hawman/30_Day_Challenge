@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+.navBar {
+  display: flex;
+  width: 100%;
+  background-color: royalblue;
+  justify-content: space-between;
+}
+
+.navTitle {
+  color: whitesmoke;
+  margin-left: 10rem;
+}
+
+.navButtons button {
+  color: red;
+}
+
+.cardKeyInfo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cardInfo {
+  display: flex;
+  border: 1px solid red;
+}
+
+.cardInfo div {
+  justify-content: space-evenly;
+  border: 1px solid black;
+}
+
+.card {
+  background-color: darkcyan;
+  width: 30%;
+  margin: 0 auto
+}
+
+.allCards {
+  display: flex;
+}
+
+.checkboxes {
+  margin: 1rem 0;
+}
