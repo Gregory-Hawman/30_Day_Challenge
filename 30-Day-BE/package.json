@@ -1,0 +1,25 @@
+{
+  "name": "30-day-be",
+  "version": "1.0.0",
+  "description": "backend for 30-Day Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gregory-Hawman/30_Day_Challenge.git"
+  },
+  "author": "Gregory Hawman <g.hawman@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gregory-Hawman/30_Day_Challenge/issues"
+  },
+  "homepage": "https://github.com/Gregory-Hawman/30_Day_Challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.95.2",
+    "pg": "^8.5.1",
+    "sqlite3": "^5.0.2"
+  }
+}
