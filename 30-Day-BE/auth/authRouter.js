@@ -5,9 +5,13 @@ const generateToken = require('./generateToken');
 const { rounds } = require('../api/secrets');
 const Users = require('../users/userModels');
 
+router.get('/', (req, res) => {
+    res.json({ api: 'go to /api/auth/register or /api/auth/login to do either' })
+})
+
 // REGISTER === REGISTER === REGISTER === REGISTER === REGISTER === //
 router.get('/register', (req, res) => {
-    res.json({ api: "a get request to /register brings you here. post to add a new user" });
+    res.json({ api: "a get request to /api/auth/register brings you here. post to add a new user" });
 });
 
 router.post('/register', (req, res) => {
@@ -31,7 +35,7 @@ router.post('/register', (req, res) => {
 
 // === LOGIN === LOGIN === LOGIN === LOGIN === LOGIN === LOGIN === //
 router.get('/login', (req, res) => {
-    res.json({ api: "a get request to /login brings you here. 'post' to login a user" });
+    res.json({ api: "a get request to /api/auth/login brings you here. 'post' to login a user" });
 });
   
 router.post('/login', (req, res) => {
