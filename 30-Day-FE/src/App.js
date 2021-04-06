@@ -5,8 +5,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCheck, faEdit, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
 
 import Navbar from './components/Navbar';
-import { HC_ChallengeCard30, HC_ChallengeCard60 } from './components/HC_ChallengeCard'
-import WelcomeBack from './components/WelcomeBack';
+import PrivateRoute from './utils/PrivateRoute'
+import Dashboard from './pages/Dashboard'
+import LandingPage from './pages/LandingPage';
 
 import './App.css'
 
@@ -17,17 +18,11 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <h1>Your Daily Challenges </h1>
-
-        <WelcomeBack />
-
-        <div className='allCards'>
-          <HC_ChallengeCard30 />
-          <HC_ChallengeCard60 />
-        </div>
+        <Route exact path='/' component={LandingPage}/>
+        <PrivateRoute path='/dashboard' component={Dashboard} />
+        
       </div>
     </Router>
-    
   );
 }
 

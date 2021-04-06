@@ -10,7 +10,7 @@ module.exports = {
 };
 
 function findUsers() {
-    return db('users').select('id', 'username', 'name');
+    return db('users').select('id', 'username', 'email', 'password');
 };
 
 function findUserBy(filter) {
@@ -22,7 +22,7 @@ function findUserById(id) {
 };
 
 async function addUser(user) {
-    const [id] = await db('users').insert(user, 'id')
+    const [id] = await db('users').insert(user, 'id');
     return findById(id);
 };
 

@@ -21,15 +21,21 @@ router.post('/register', (req, res) => {
 
     Users.addUser(user)
         .then(newUser => {
-            const token = generateToken(user);
-            res.status(201).json({
-                message: `Successful Registration, Welcome ${user.username}!`,
-                newUser: newUser,
-                token: token,
-            });
+            if (newUser) {
+                const token = generateToken(user);
+                res.status(201).json({ 
+                  message: `Successful Registration, Welcome ${user.username}!`,
+                  newUser: newUser,
+                  token: token, 
+                });
+            } else {
+            res.status(401).json({ 
+                message: 'Sign-up to continue' 
+            })
+            }
         })
         .catch(error => {
-            res.status(500).json({ message: 'error occurred registering user', error });
+            res.status(500).json({ message: 'Server Error occurred during registering', error });
         });
 });
 
@@ -46,7 +52,7 @@ router.post('/login', (req, res) => {
             if (user && bcrypt.compareSync(password, user.password)) {
                 const token = generateToken(user);
                 res.status(200).json({ 
-                    message: `Welcome ${user.name}!`,
+                    message: `Welcome ${user.username}!`,
                     user: user, 
                     token: token, 
                 });
