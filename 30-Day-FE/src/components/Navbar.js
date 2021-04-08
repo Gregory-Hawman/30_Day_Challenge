@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css'
+import { GuestToolbar } from './Toolbar';
 
 const Navbar = () => {
 
@@ -7,6 +8,9 @@ const Navbar = () => {
         <div className='navBar'>
             <div className='navTitle'>
                 <h1>30-Day Challenge</h1>
+            </div>
+            <div>
+                <GuestToolbar />
             </div>
             
             <div className='navButtons'>
