@@ -2,25 +2,33 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCheck, faEdit, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faEdit, faEnvelope, faKey, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
-import Navbar from './components/Navbar';
-import PrivateRoute from './utils/PrivateRoute'
-import Dashboard from './pages/Dashboard'
+import PrivateRoute from './utils/PrivateRoute';
+
+import Header from './components/NavBars/Header';
+import Footer from './components/NavBars/Footer';
+import Challenges from './pages/AllChallenges';
+import Members from './pages/Members';
+
+import Dashboard from './pages/Dashboard';
 import LandingPage from './pages/LandingPage';
 
 import './App.css'
 
-library.add(faEnvelope, faKey, faEdit, faCheck);
+library.add(faEnvelope, faKey, faEdit, faCheck, faAngleDown);
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Header />
         <Route exact path='/' component={LandingPage}/>
+        <Route path='/challenges' component={Challenges}/>
+        <Route path='/members' component={Members}/>
         <PrivateRoute path='/dashboard' component={Dashboard} />
-        
+
+        <Footer />
       </div>
     </Router>
   );

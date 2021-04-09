@@ -42,6 +42,7 @@
   width: 100%;
   background-color: royalblue;
   justify-content: space-between;
+  height: 6rem;
 }
 
 .navTitle {
@@ -51,6 +52,14 @@
 
 .navButtons button {
   color: red;
+}
+
+.footer {
+  width: 100%;
+  background-color: royalblue;
+  height: 6rem;
+  position: absolute;
+  bottom: 0px;
 }
 
 .cardKeyInfo {
@@ -80,4 +89,22 @@
 
 .checkboxes {
   margin: 1rem 0;
+}
+
+.imgBanner {
+  display: flex;
+  margin: 1rem 0;
+  border: 1px solid red;
+  justify-content: space-evenly;
+}
+
+.img {
+  margin: 1rem;
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid black;
+}
+
+.toolbar{
+  display: flex;
 }
