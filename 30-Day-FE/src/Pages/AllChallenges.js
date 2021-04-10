@@ -4,7 +4,7 @@ function Challenges() {
 
     return (
         <div>
-            <h1></h1>
+            <h1>Challenges</h1>
         </div>
     )
 };

@@ -45,7 +45,7 @@ function Register() {
                 <input 
                     type='text'
                     name='username'
-                    placeholder='Username (Your Email works)'
+                    placeholder='Username (Email works too)'
                     value={register.username}
                     onChange={handleRegisterChange}
                 />

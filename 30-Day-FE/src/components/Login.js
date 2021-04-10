@@ -58,7 +58,7 @@ function Login() {
                 <input 
                     type='text'
                     name='username'
-                    placeholder='Username (Your Email works too!)'
+                    placeholder='Username (Email works too)'
                     value={login.username}
                     onChange={handleLoginChange}
                 />

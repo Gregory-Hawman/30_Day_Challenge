@@ -40,7 +40,7 @@
 .navBar {
   display: flex;
   width: 100%;
-  background-color: royalblue;
+  background-color: #4464AD;
   justify-content: space-between;
   height: 6rem;
 }
@@ -56,7 +56,7 @@
 
 .footer {
   width: 100%;
-  background-color: royalblue;
+  background-color: #4464AD;
   height: 6rem;
   position: absolute;
   bottom: 0px;
@@ -108,3 +108,19 @@
 .toolbar{
   display: flex;
 }
+
+/* colors
+F2E9DC
+Linen
+
+63A375
+Forest green
+
+466995
+Queen Blue
+
+650D1B
+Persian Plum
+
+31231E
+Bistre */
