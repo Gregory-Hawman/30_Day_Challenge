@@ -41,28 +41,38 @@ function Register() {
     return (
         <div>
             <form onSubmit={handleRegisterSubmit}>
+                <div>
+                    <label>Username: </label>
+                    <input 
+                        type='text'
+                        name='username'
+                        placeholder='Username (Email works too)'
+                        value={register.username}
+                        onChange={handleRegisterChange}
+                    />
+                </div>
+                <div>
+                    <label>Email: </label>
+                    <input 
+                        type='email'
+                        name='email'
+                        placeholder='Email'
+                        value={register.email}
+                        onChange={handleRegisterChange}
+                    />
+                </div>
+                <div>
+                    <label>Password: </label>
+                    <input 
+                        type='password'
+                        name='password'
+                        placeholder='Password'
+                        value={register.password}
+                        onChange={handleRegisterChange}
+                    />
+                </div>
+                
                 <button type='submit'>Sign up</button>
-                <input 
-                    type='text'
-                    name='username'
-                    placeholder='Username (Email works too)'
-                    value={register.username}
-                    onChange={handleRegisterChange}
-                />
-                <input 
-                    type='email'
-                    name='email'
-                    placeholder='Email'
-                    value={register.email}
-                    onChange={handleRegisterChange}
-                />
-                <input 
-                    type='password'
-                    name='password'
-                    placeholder='Password'
-                    value={register.password}
-                    onChange={handleRegisterChange}
-                />
             </form>
         </div>
     )

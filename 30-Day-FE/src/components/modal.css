@@ -80,3 +80,19 @@
       opacity: 1;
     }
   }
+
+  .modal-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 25%;
+    margin: 0 auto;
+    
+  }
+
+  .modal-container div {
+    margin: 1rem;
+    border: 1px solid blue;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+  }

@@ -29,17 +29,19 @@ function LandingPage() {
 
             <h2>Are you up for a Challenge?</h2>
 
-            <button onClick={ () => modal1.current.open()}>Sign Up</button>
-            <button onClick={() => modal2.current.open()}>Login</button>
+            <div className='modal-container'>
+                <div onClick={ () => modal1.current.open()}>Sign Up</div>
+                <div onClick={() => modal2.current.open()}>Login</div>
 
-            <Modal ref={modal1}>
-                <Register />
-            </Modal>
+                <Modal ref={modal1}>
+                    <Register />
+                </Modal>
 
-            <Modal ref={modal2}>
-                <Login />
-            </Modal>
-
+                <Modal ref={modal2}>
+                    <Login />
+                </Modal>
+            </div>
+            
             <h2>Need Inspiration?</h2>
             <h3>Check out what our members are doing!</h3>
             <Link to='/challenges'>Challenges</Link>

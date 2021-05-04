@@ -26,7 +26,7 @@ function App() {
         <Route exact path='/' component={LandingPage}/>
         <Route path='/challenges' component={Challenges}/>
         <Route path='/members' component={Members}/>
-        <PrivateRoute path='/dashboard' component={Dashboard} />
+        <Route path='/dashboard' component={Dashboard} />
 
         <Footer />
       </div>
